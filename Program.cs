@@ -10,16 +10,27 @@ class Program
 	{
 		// Utilize Console.ReadLine para leitura do input de cada linha
 		// Utilize Console.WriteLine para fazer o output de cada linha
-
+		string[] joiasLista;
 		do
 		{
-			var[] joiasLista = Console.ReadLine().Split('\n');
-		} while (!String.IsNullOrEmpty(joiasLista));
+			joiasLista = Console.ReadLine().Split('\n');
+		} while (!Console.ReadLine().Equals(""));
 
-		var joiasDistintas = joiasLista.Distinct();
+		Array.Sort(joiasLista);
 
-		int countJoias = joiasDistintas.Count();
+		foreach (string joia in joiasLista)
+		{
+			Console.WriteLine(joia);
+		}
 
-		System.Console.WriteLine(countJoias);
+
+
+		// var joiasDistintas = joiasLista.Distinct();
+
+		// int countJoias = joiasDistintas.Count();
+
+		// System.Console.WriteLine(countJoias);
 	}
 }
+
+
