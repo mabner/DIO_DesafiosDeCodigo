@@ -33,7 +33,7 @@ namespace DesafiosDeCodigo
 
 			for (int i = 1; i <= n; i++)
 			{
-				System.Console.WriteLine($"{inicio} {inicio * inicio} {inicio * inicio * inicio}");
+				System.Console.WriteLine($"{inicio} {Math.Pow(inicio, 2)} {Math.Pow(inicio, 3)}");
 				inicio++;
 			}
 		}
