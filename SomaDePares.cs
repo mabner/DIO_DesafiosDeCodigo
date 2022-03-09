@@ -29,7 +29,22 @@ namespace DesafiosDeCodigo
 		{
 			int d = int.Parse(Console.ReadLine());
 
+			while (d != 0)
+			{
+				int soma = 0;
+				int pares = 1;
 
+				for (int i = d; pares <= 5; i++)
+				{
+					if (i % 2 == 0)
+					{
+						soma += i;
+						pares++;
+					}
+				}
+				Console.WriteLine(soma);
+				d = int.Parse(Console.ReadLine());
+			}
 
 		}
 	}
