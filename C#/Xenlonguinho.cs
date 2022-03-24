@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DIO
 {
-	class Program
+	class Xenlonguinho
 	{
 		static void Main(string[] args)
 		{

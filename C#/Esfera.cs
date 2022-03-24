@@ -1,6 +1,6 @@
 using System;
 
-class DIO
+class Esfera
 {
 	static void Main(string[] args)
 	{
