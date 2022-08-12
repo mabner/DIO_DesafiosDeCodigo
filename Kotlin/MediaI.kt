@@ -15,7 +15,7 @@
 * caso contrário, você receberá "Presentation Error".
 */
 
-import java.util.Scanner
+import java.util.*
 
 fun main(args: Array<String>) {
   var reader = Scanner(System.`in`)
