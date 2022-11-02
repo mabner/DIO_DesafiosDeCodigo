@@ -1,51 +1,44 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-
-namespace DesafiosDeCodigo.C
+public class ElementoMajoritario
 {
-	public class ElementoMajoritario
+	public static void Main(String[] args)
 	{
-		public static void Main(String[] args)
+		int n = int.Parse(Console.ReadLine());
+
+		int[] num = new int[n];
+
+		for (int i = 0; i < n; i++)
 		{
-			int n = int.Parse(Console.ReadLine());
-
-			int[] num = new int[n];
-
-			for (int i = 0; i < num.lenght; i++)
-			{
-				num[i] = int.Parse(Console.ReadLine());
-			}
-			Console.WriteLine(MajorityElement(num));
-
+			num[i] = int.Parse(Console.ReadLine());
 		}
-		public static int MajorityElement(int[] nums)
+		Console.WriteLine(MajorityElement(num));
+
+	}
+	public static int MajorityElement(int[] nums)
+	{
+		int major = 0;
+		int count = 0;
+		foreach (int v in nums)
 		{
-			int major = nums[0];
-			int count = 1;
-			for (                   )
+			if (major != v)
 			{
-				if (                    )
+				major = v;
+				count = 0;
+			}
+			else
+			{
+				if (major == v)
 				{
-					major = nums[i];
-					count;
+					count++;
 				}
 				else
 				{
-					if (major == nums[i])
-					{
-						count++;
-					}
-					else
-					{
-						count--;
-					}
+					count--;
 				}
 			}
-			return;
 		}
+		return major;
 	}
 }
