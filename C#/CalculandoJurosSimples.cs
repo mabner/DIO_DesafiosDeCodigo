@@ -68,5 +68,7 @@ public class Program
     public static double CalcularJurosSimples(double P, double i, int n)
     {
         // TODO: Calcule e retorne o montante final com juros simples
+        double A = P + (P * i * n);
+        return A;
     }
 }
