@@ -40,7 +40,6 @@ Entrada 	Saída
 using System;
 using System.Collections.Generic;
 
-
 class Program
 {
     static void Main()
@@ -54,7 +53,7 @@ class Program
             // TODO: Adicione o valor à lista somente se for maior que zero
             if (valor > 0)
             {
-              despesas.Add(valor);
+                despesas.Add(valor);
             }
         }
 
@@ -67,7 +66,7 @@ class Program
             // TODO: Imprima cada valor da lista de despesas válidas
             foreach (int despesa in despesas)
             {
-              Console.WriteLine(despesa);
+                Console.WriteLine(despesa);
             }
         }
     }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DesafiosDeCodigo
 {
-	/*
+    /*
     O programa deve ler um valor inteiro D indefinidas vezes, ele só irá parar quando o valor de D for igual a 0.
     Para cada D lido, imprima a soma dos 5 pares consecutivos a partir de D, inclusive ele mesmo , se for par.
 
@@ -15,7 +15,7 @@ namespace DesafiosDeCodigo
     .:: Entrada ::.
     O arquivo de entrada contém muitos valores inteiros. O último valor do arquivo é zero.
 
-    .:: Saída ::. 
+    .:: Saída ::.
     Imprima a saida conforme a explicação acima e o exemplo abaixo.
 
     Exemplo de Entrada 	Exemplo de Saída
@@ -23,29 +23,28 @@ namespace DesafiosDeCodigo
         11            |         80
         0             |
     */
-	public class SomaDePares
-	{
-		static void Main(string[] args)
-		{
-			int d = int.Parse(Console.ReadLine());
+    public class SomaDePares
+    {
+        static void Main(string[] args)
+        {
+            int d = int.Parse(Console.ReadLine());
 
-			while (d != 0)
-			{
-				int soma = 0;
-				int pares = 1;
+            while (d != 0)
+            {
+                int soma = 0;
+                int pares = 1;
 
-				for (int i = d; pares <= 5; i++)
-				{
-					if (i % 2 == 0)
-					{
-						soma += i;
-						pares++;
-					}
-				}
-				Console.WriteLine(soma);
-				d = int.Parse(Console.ReadLine());
-			}
-
-		}
-	}
+                for (int i = d; pares <= 5; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        soma += i;
+                        pares++;
+                    }
+                }
+                Console.WriteLine(soma);
+                d = int.Parse(Console.ReadLine());
+            }
+        }
+    }
 }

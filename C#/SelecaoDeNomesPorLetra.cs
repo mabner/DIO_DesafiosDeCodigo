@@ -1,4 +1,3 @@
-
 /*
 # Seleção de Nomes por Letra #
 
@@ -46,21 +45,17 @@ class Program
         string linhaDeNomes = Console.ReadLine();
 
         // Separa os nomes e remove espaços extras
-        List<string> nomes = linhaDeNomes
-            .Split(',')
-            .Select(nome => nome.Trim())
-            .ToList();
+        List<string> nomes = linhaDeNomes.Split(',').Select(nome => nome.Trim()).ToList();
 
         char letraFiltro = char.Parse(Console.ReadLine());
 
         // TODO: Filtre a lista de nomes que começam com a letra (ignore maiúsculas/minúsculas):
         foreach (string nome in nomes)
         {
-          if (nome[0] == letraFiltro)
-          {
-            filtrados.Add(nome);
-          }
-
+            if (nome[0] == letraFiltro)
+            {
+                filtrados.Add(nome);
+            }
         }
 
         // TODO: Retorne o resultado e implemente a condição if para retornar 'Nenhum nome encontrado' e exiba o resultado:
