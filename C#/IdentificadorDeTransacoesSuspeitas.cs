@@ -46,4 +46,78 @@ Entrada 	Saída
 300.00
 */
 
- 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+// TODO: Crie a Classe AnalisadorDeTransacoes:
+public class AnalisadorDeTransacoes
+{
+    public decimal Limite { get; set; }
+
+    // TODO: Crie a lista para armazenar as transações realizadas:
+    public List<decimal> Transacoes { get; set; }
+
+    public AnalisadorDeTransacoes(decimal limite)
+    {
+        Limite = limite;
+        Transacoes = new List<decimal>();
+    }
+
+    public void AdicionarTransacao(decimal valor)
+    {
+        Transacoes.Add(valor);
+    }
+
+    public List<decimal> ObterTransacoesSuspeitas()
+    {
+        // Retorne as transações que são superiores ao limite
+        return Transacoes.Where(transacao => transacao > Limite).ToList();
+    }
+
+    public void ExibirRelatorio()
+    {
+        var suspeitas = ObterTransacoesSuspeitas();
+
+        // TODO: Implemente a condição if para retornar uma mensagem informando que não há transações suspeitas:
+        if (suspeitas.Count() == 0)
+        {
+            Console.WriteLine("Nenhuma transação suspeita");
+        }
+        else
+        {
+            decimal totalSuspeitas = suspeitas.Sum();
+            int numeroSuspeitas = suspeitas.Count();
+
+            string transacaoTexto =
+                numeroSuspeitas == 1 ? "transacao suspeita" : "transacoes suspeitas";
+
+            // TODO: imprima o total das transações suspeitas com duas casas decimais
+            // e a quantidade de transações suspeitas
+            Console.WriteLine($"Transacoes suspeitas: {totalSuspeitas:F2}");
+            Console.WriteLine($"{numeroSuspeitas} {transacaoTexto}");
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        decimal limite = decimal.Parse(Console.ReadLine());
+        int quantidade = int.Parse(Console.ReadLine());
+
+        var analisador = new AnalisadorDeTransacoes(limite);
+
+        for (int i = 0; i < quantidade; i++)
+        {
+            decimal valor = decimal.Parse(Console.ReadLine());
+
+            // TODO: adicione a transação à instância do analisador
+            analisador.AdicionarTransacao(valor);
+        }
+
+        analisador.ExibirRelatorio();
+    }
+}
