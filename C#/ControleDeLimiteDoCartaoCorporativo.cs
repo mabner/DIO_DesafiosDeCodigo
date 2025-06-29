@@ -76,11 +76,11 @@ class CartaoCorporativo
         Console.WriteLine($"Total gasto: {CalcularTotal()}");
         if (UltrapassouLimite())
         {
-          Console.WriteLine("Limite ultrapassado");
+            Console.WriteLine("Limite ultrapassado");
         }
         else
         {
-          Console.WriteLine("Limite OK");
+            Console.WriteLine("Limite OK");
         }
     }
 }
